@@ -29,4 +29,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.2.0
       with:
         branch: gh-pages # The branch the action should deploy to.
-        folder: dist/tailwindAngular # The folder the action should deploy.
+        folder: dist/Test-Mayasoft # The folder the action should deploy.
