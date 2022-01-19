@@ -1,0 +1,56 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 20px;
+
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  width: 200px;
+  border: 1px solid black;
+  height: 200px;
+  display: inline-block;
+  padding: 5px;
+  overflow: auto;
+}
+
+ul > li {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+mat-form-field {
+  resize: none;
+}
+
+textarea{
+  resize: none;
+  width: 600px;
+  height: 150px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

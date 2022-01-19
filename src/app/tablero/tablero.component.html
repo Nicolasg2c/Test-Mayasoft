@@ -1,0 +1,55 @@
+<div class="grid-container">
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+         <div class="col">
+
+           <span> Cadena de maximo 500 caracteres le quedan: {{500 - contador}} caracteres</span>
+           <form (ngSubmit)="enviar()">
+            <p>
+              <textarea
+              class = "textareawidth"
+              type="text" 
+              name="cadena" 
+              placeholder="introduzca un texto" 
+              (keyup)="contarCaracteres($event)" 
+              maxlength="500" size="100" 
+              [(ngModel)]="texto.cadena"
+              ></textarea>
+            </p>
+            
+            <p>Máxima longitud de la subcadena:
+              <input 
+              type="tamSubcadena"
+              name="tamSubcad"
+              type = "number"
+              style="width: 20px;"
+              [(ngModel)]="texto.tamSubcadena">
+            </p>
+
+            <button mat-raised-button [disabled]="validarCondiciones()" type="submit">Enviar</button> 
+          </form>
+         </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <!-- <div class="grid-container">
+    <ul>
+      <li *ngFor="let subcadena of subdivision">{{subcadena}}</li>
+     </ul>
+   </div> -->
+
+   <div class="grid-container" >
+     <mat-list >
+       <mat-list-item  *ngFor="let subcadena of subdivision">{{subcadena}}</mat-list-item>
+     </mat-list>
+   </div>
+</div>
