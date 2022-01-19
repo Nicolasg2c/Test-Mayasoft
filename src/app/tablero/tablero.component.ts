@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { SubdivisionService } from '../subdivision.service';
-import {FormControl, Validators} from '@angular/forms';
 
 interface Cadena {
   cadena: String;

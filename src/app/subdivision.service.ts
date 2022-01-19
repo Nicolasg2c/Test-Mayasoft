@@ -9,9 +9,7 @@ export class SubdivisionService {
   
 
   public subDividirCadena(cadena:String, subdivision:number):String[]{
-     let contador = 0;
      let lista=[];
-     let frase="";
      let resultado=[];     
 
      lista = cadena.split(" ");
