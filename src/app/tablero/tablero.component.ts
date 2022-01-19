@@ -39,7 +39,7 @@ export class TableroComponent {
     
     getMessageError(){
       if(this.validarCondiciones()){
-        return 'Por favor ingrese una cadena valida'
+        return  '¡Alerta: Por favor ingrese una cadena valida y un numero de subdivisión!'
       }
       else{
         return ''

@@ -9,8 +9,9 @@
   right: 15px;
   bottom: 15px;
   border-radius: 20px;
-
+  text-align: justify
 }
+
 .simple-card {
   position: absolute;
   left: 30px;
@@ -46,9 +47,6 @@ ul > li {
   padding: 8px;
 }
 
-mat-form-field {
-  resize: none;
-}
 
 textarea{
   resize: none;
