@@ -16,7 +16,7 @@ import { TableroComponent } from './tablero/tablero.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatMenuModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

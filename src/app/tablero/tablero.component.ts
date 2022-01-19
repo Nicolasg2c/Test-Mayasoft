@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { SubdivisionService } from '../subdivision.service';
+import {FormControl, Validators} from '@angular/forms';
 
 interface Cadena {
   cadena: String;
@@ -19,21 +20,32 @@ export class TableroComponent {
 
   constructor(private breakpointObserver: BreakpointObserver, private service: SubdivisionService) { }
 
+  
   texto: Cadena = {
     cadena: '',
     tamSubcadena: 0
   }
-
+  
   enviar() {  
     this.subdivision = [];
     this.subdivision = this.service.subDividirCadena(this.texto.cadena, this.texto.tamSubcadena);
-
+    
   }
-
+  
   validarCondiciones(): boolean {
     return !(this.texto.tamSubcadena > 0 && this.texto.cadena.length > 0 
-      && ((this.texto.cadena.split(" ").length == 1 && this.texto.tamSubcadena >= this.texto.cadena.trim().length) || this.texto.cadena.split(" ").length > 1 && this.getMaxLengthValue(this.texto.cadena) <= this.texto.tamSubcadena)); //Hola 3 Hola x
-  }
+      && ((this.texto.cadena.split(" ").length == 1 && this.texto.tamSubcadena >= this.texto.cadena.trim().length) || this.texto.cadena.split(" ").length > 1 && this.getMaxLengthValue(this.texto.cadena) <= this.texto.tamSubcadena));
+      
+    }
+    
+    getMessageError(){
+      if(this.validarCondiciones()){
+        return 'Por favor ingrese una cadena valida'
+      }
+      else{
+        return ''
+      }
+    }
 
   getMaxLengthValue(phrase: String) {
     const lengths: number[] = phrase.split(" ").map(

@@ -10,7 +10,7 @@
         <mat-card-content class="dashboard-card-content">
          <div class="col">
 
-           <span> Cadena de maximo 500 caracteres le quedan: {{500 - contador}} caracteres</span>
+           <span> Cadena de máximo 500 caracteres le quedan: {{500 - contador}} caracteres</span>
            <form (ngSubmit)="enviar()">
             <p>
               <textarea
@@ -32,8 +32,9 @@
               style="width: 20px;"
               [(ngModel)]="texto.tamSubcadena">
             </p>
-
             <button mat-raised-button [disabled]="validarCondiciones()" type="submit">Enviar</button> 
+            <p></p>
+            <h5 style="color: red;">{{getMessageError()}}</h5>
           </form>
          </div>
         </mat-card-content>
@@ -42,7 +43,7 @@
   </mat-grid-list>
 
   <div class="grid-container" style="align-items: center;">
-  <mat-card class="simple-card" style="border-radius: 20px; align-items: center;"><mat-card-title>Resultado</mat-card-title>
+  <mat-card class="simple-card" style="border-radius: 20px; align-items: center;"><mat-card-title>Resultados</mat-card-title>
       <mat-list >
         <mat-list-item  *ngFor="let subcadena of subdivision">{{subcadena}}</mat-list-item>
       </mat-list>
