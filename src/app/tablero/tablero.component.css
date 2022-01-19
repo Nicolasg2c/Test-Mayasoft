@@ -66,3 +66,11 @@ mat-list-item {
 mat-list-item:last-child {
   border-bottom:0px solid white
 }
+
+button {
+  border-radius: 10px;
+}
+.mat-raised-button:hover {
+  background-color: #84c3f7b6; /* Green */
+  color: black;
+}
