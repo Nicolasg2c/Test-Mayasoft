@@ -11,6 +11,13 @@
   border-radius: 20px;
 
 }
+.simple-card {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
 
 .more-button {
   position: absolute;

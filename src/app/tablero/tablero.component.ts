@@ -51,7 +51,7 @@ export class TableroComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Introduzca su texto', cols: 1, rows: 1 }
+          { title: 'Introduzca su texto', cols: 2, rows: 1 }
         ];
       }
 
